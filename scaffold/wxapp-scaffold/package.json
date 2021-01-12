@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "description": "小程序Gulp构建工具",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "author": "SparkingLemon",
+  "devDependencies": {
+    "del": "5.1.0",
+    "gulp": "4.0.2",
+    "gulp-changed": "4.0.2",
+    "gulp-clean-css": "4.2.0",
+    "gulp-copy": "^4.0.1",
+    "gulp-less": "4.0.1",
+    "gulp-rename": "1.4.0"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development gulp dev",
+    "build:dev": "NODE_ENV=development gulp",
+    "build:prod": "NODE_ENV=production gulp"
+  }
+}

@@ -1,0 +1,6 @@
+# title是页面的配置项，可以生成页面title
+title: 示例页面
+meta:
+  description: 示例页面
+# mobile为true时读取mobile.template.html
+mobile: false
