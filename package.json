@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "create-sparkling-app": "./index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SparklingFun/create-sparkling-app.git"

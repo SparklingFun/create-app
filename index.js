@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // `npx create-sparkling-app <template> <dirname>`
 const fs = require('fs-extra');
 const argv = process.argv;
