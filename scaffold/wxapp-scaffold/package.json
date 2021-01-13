@@ -1,9 +1,10 @@
 {
-  "version": "1.0.0",
-  "description": "小程序Gulp构建工具",
+  "name": "wxapp-scaffold",
+  "version": "0.0.1",
+  "description": "",
   "main": "gulpfile.js",
   "license": "MIT",
-  "author": "SparkingLemon",
+  "author": "",
   "devDependencies": {
     "del": "5.1.0",
     "gulp": "4.0.2",

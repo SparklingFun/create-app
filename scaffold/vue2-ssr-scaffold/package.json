@@ -1,7 +1,7 @@
 {
-  "name": "vuessr-docker-template",
-  "version": "0.0.2",
-  "description": "A frame using Docker & VueSSR to generate and deploy sample Vue.js v2.6+ applications, refer to offical vue-hackernews-2.0 repo.",
+  "name": "vuessr-docker-scaffold",
+  "version": "0.0.1",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "rimraf dist && npm run build:prod && cross-env NODE_ENV=production node server.js",
@@ -9,12 +9,7 @@
     "build:prod": "cross-env NODE_ENV=production webpack --config build/webpack.client.config.js --progress --hide-modules && cross-env NODE_ENV=production webpack --config build/webpack.server.config.js --progress --hide-modules",
     "build:dev": "cross-env NODE_ENV=development webpack --config build/webpack.client.config.js --progress --hide-modules && cross-env NODE_ENV=development webpack --config build/webpack.server.config.js --progress --hide-modules"
   },
-  "keywords": [
-    "Template",
-    "SSR",
-    "Vue.js"
-  ],
-  "author": "SparkingLemon",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.0",

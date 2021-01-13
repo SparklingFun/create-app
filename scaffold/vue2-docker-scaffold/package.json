@@ -1,7 +1,7 @@
 {
-  "name": "vue-docker-template",
-  "version": "1.0.1",
-  "description": "Vue SPA template using Docker as deployment, include Vue-Router, Vuex, common libs & element-ui.",
+  "name": "vue-docker-scaffold",
+  "version": "0.0.1",
+  "description": "",
   "scripts": {
     "build:dev": "NODE_ENV=development webpack --progress --config build/webpack.prod.js",
     "build:prod": "NODE_ENV=production webpack --config build/webpack.prod.js",
@@ -11,11 +11,7 @@
     "lint": "eslint --ext .js,.vue src common build",
     "lint-fix": "eslint --fix --ext .js,.vue src"
   },
-  "keywords": [
-    "Vue.js",
-    "Webpack4"
-  ],
-  "author": "SparkingLemon",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.5.5",

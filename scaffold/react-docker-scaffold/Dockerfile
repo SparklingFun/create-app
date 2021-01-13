@@ -3,7 +3,7 @@ FROM node:lts-alpine AS builder
 WORKDIR /tmp/app
 COPY ./package.json /tmp/app/package.json
 RUN yarn install
-ARG BUILD_ENV=__BUILD_ENV__
+# ARG BUILD_ENV=__BUILD_ENV__
 COPY . /tmp/app
 RUN npm run build:${BUILD_ENV}
 

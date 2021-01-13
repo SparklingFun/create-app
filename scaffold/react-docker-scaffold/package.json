@@ -1,7 +1,7 @@
 {
-  "name": "react-docker-template",
+  "name": "react-docker-scaffold",
   "version": "0.0.1",
-  "description": "React SPA template using Docker as deployment, include antd.",
+  "description": "",
   "scripts": {
     "build:dev": "NODE_ENV=development webpack --progress --config build/webpack.prod.js",
     "build:prod": "NODE_ENV=production webpack --config build/webpack.prod.js",
@@ -9,11 +9,7 @@
     "preinstall": "node ./build/extend/preinstall.npmhook.js",
     "postinstall": "node ./build/extend/postinstall.npmhook.js"
   },
-  "keywords": [
-    "React.js",
-    "Webpack4"
-  ],
-  "author": "SparkingLemon",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.5.5",
