@@ -6,7 +6,7 @@ const argv = process.argv;
 
 function execCopy(type, tplname, topath) {
     try {
-        fs.copySync(process.cwd() + `/${type}/${tplname}`, topath, {
+        fs.copySync(__dirname + `/${type}/${tplname}`, topath, {
             errorOnExist: true
         });
     } catch(e) {
@@ -26,14 +26,13 @@ function modifyPkgJson(topath) {
 }
 
 function main() {
-    console.log(__dirname);
     const tplname = argv[2];
     const type = "scaffold";
     if(!tplname) {
         console.log("[Error] Empty scaffold name, exit!");
         process.exit(1);
     }
-    if(!fs.existsSync(process.cwd() + `/${type}/${tplname}`)) {
+    if(!fs.existsSync(__dirname + `/${type}/${tplname}`)) {
         console.log("[Error] No exist scaffold named '"+ tplname +"', please check!");
         process.exit(1);
     }
