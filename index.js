@@ -26,6 +26,7 @@ function modifyPkgJson(topath) {
 }
 
 function main() {
+    console.log(__dirname);
     const tplname = argv[2];
     const type = "scaffold";
     if(!tplname) {
