@@ -175,4 +175,4 @@ function uuidv4() {
   return [...bytes].map(b => ('0' + b.toString(16)).slice(-2)).join('') // to hex
 }
 
-module.exports = Sentry;
+export default Sentry;

@@ -29,4 +29,4 @@ const handlers = {
   redirect: redirectHandler
 }
 
-module.exports = handlers;
+export default handlers;

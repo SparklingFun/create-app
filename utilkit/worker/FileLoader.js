@@ -13,4 +13,4 @@ const FileLoaders = {
   html: htmlLoader
 }
 
-module.exports = FileLoaders;
+export default FileLoaders;
