@@ -43,6 +43,8 @@ function main() {
     }
     execCopy(type, tplname, topath);
     modifyPkgJson(topath);
+
+    console.log(`Your project "${topath.split("/").reverse()[0]}" has been created, \nPlease use: \n  cd ${topath} && yarn install \n#or \n  cd ${topath} && npm i`)
 }
 
 main();
