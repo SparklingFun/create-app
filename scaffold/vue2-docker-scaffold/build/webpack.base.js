@@ -24,12 +24,8 @@ const devPlugins = [
   new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
     // both options are optional
-    filename: '[name].[hash:8].css',
+    filename: '[name].[contenthash:8].css',
     chunkFilename: '[id].css'
-  }),
-  new webpack.IgnorePlugin({
-    resourceRegExp: /^\.\/locale$/,
-    contextRegExp: /moment$/
   }),
   ...addHtmlWebpackPlugin(),
   new ResourceHintWebpackPlugin(),
@@ -47,12 +43,8 @@ const prodPlugins = [
   new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
     // both options are optional
-    filename: '[name].[hash:8].css',
+    filename: '[name].[contenthash:8].css',
     chunkFilename: '[id].css'
-  }),
-  new webpack.IgnorePlugin({
-    resourceRegExp: /^\.\/locale$/,
-    contextRegExp: /moment$/
   }),
   ...addHtmlWebpackPlugin(),
   new ResourceHintWebpackPlugin(),
@@ -67,9 +59,9 @@ const prodPlugins = [
 module.exports = {
   mode: isDev ? 'development' : 'production',
   entry: addEntry(),
-  target: 'web',
+  target: ['web', 'es5'],
   output: {
-    filename: '[name].[hash:8].js',
+    filename: '[name].[contenthash:8].js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/'
   },
@@ -92,29 +84,14 @@ module.exports = {
         test: /\.jsx$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
+          loader: 'babel-loader'
         }
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-            plugins: [
-              [
-                'component',
-                {
-                  libraryName: 'element-ui',
-                  styleLibraryName: 'theme-chalk'
-                }
-              ]
-            ]
-          }
+          loader: 'babel-loader'
         }
       },
       // 针对.sass/.scss文件

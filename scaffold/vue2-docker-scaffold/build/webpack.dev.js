@@ -11,7 +11,7 @@ const { getHost } = require('./util')
 // dev environment
 module.exports = merge(baseConfig, {
   mode: 'development',
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin({
     })
@@ -25,6 +25,7 @@ module.exports = merge(baseConfig, {
     host: getHost(),
     port: 18001,
     hot: true,
+    writeToDisk: true,
     overlay: {
       warnings: false,
       errors: true
@@ -32,7 +33,7 @@ module.exports = merge(baseConfig, {
     historyApiFallback: {
       rewrites: [
         { from: /^\/example/, to: '/example.html' },
-        { from: /^\/miniapp_active/, to: '/miniapp_active.html' }
+        { from: /^\/exampleb/, to: '/exampleb.html' }
       ]
     }
   }

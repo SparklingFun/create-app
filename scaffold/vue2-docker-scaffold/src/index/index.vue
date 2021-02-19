@@ -5,7 +5,6 @@
   </div>
 </template>
 <script>
-// 框架内置Axios, Element-UI
 export default {
   data () {
     return {}
